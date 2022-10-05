@@ -39,13 +39,13 @@ namespace DesafioFundamentos.Models
             // Verifica se o veículo existe
             if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
             {
-                // Implementado Mensagem destacando a placa informada
-                Console.WriteLine($"Digite a quantidade de horas que o Veículo Placa : {placa} ficou estacionado:");
-
+            
                 // TODO: Pedir para o usuário digitar a quantidade de horas que o veículo permaneceu estacionado,
                 // TODO: Realizar o seguinte cálculo: "precoInicial + precoPorHora * horas" para a variável valorTotal                
                 
-               
+                // Implementado Mensagem destacando a placa informada
+                Console.WriteLine($"Digite a quantidade de horas que o Veículo Placa : {placa} ficou estacionado:");
+
                 int horas = 0;
                 // Implementado digitar quantidade de horas
                 horas =int.Parse(Console.ReadLine());
