@@ -19,9 +19,10 @@ namespace DesafioFundamentos.Models
             string placa="";          
             Console.WriteLine("Digite a placa do veículo para estacionar:");
             placa = Console.ReadLine();
+            //placa=placa.ToUpper();
             // Incluir se placa for informada
             if (!string.IsNullOrEmpty(placa)){
-               veiculos.Add(placa);
+               veiculos.Add(placa.ToUpper());
             }
             
         }
@@ -57,7 +58,7 @@ namespace DesafioFundamentos.Models
                 // Implementado Remover veículo
                 veiculos.Remove(placa);
 
-                Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal}");
+                Console.WriteLine($"O veículo {placa.ToUpper()} foi removido e o preço total foi de: R$ {valorTotal}");
             }
             else
             {
@@ -71,6 +72,8 @@ namespace DesafioFundamentos.Models
             if (veiculos.Any())
             {
                 Console.WriteLine("Os veículos estacionados são:");
+                // Implementado classificar a lista antes de exibir
+                veiculos.Sort();
                 // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
                 // Implementado
                 foreach(string veiculo in veiculos){
